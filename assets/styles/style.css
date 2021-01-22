@@ -1,5 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap");
 
+/* Rule yang dituliskan dalam block @media di bawah akan diterapkan pada device yang memiliki ukuran viewport di bawah 992px */
+/* @media screen and (max-width: 992px) {
+  ........
+ } */
+
+/* Rule yang dituliskan dalam block @media di bawah akan diterapkan pada device yang memiliki ukuran viewport di bawah 600px */
+/* @media screen and (max-width: 600px) {
+    ........
+ } */
+
+@media screen and (max-width: 600px) {
+  #content,
+  aside {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Dengan menerapkan nilai border-box pada properti box-sizing, kita dapat menentukan dimensi kotak dengan tepat, tanpa dipengaruhi oleh padding dan border.  */
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Quicksand", sans-serif;
   padding: 0;
@@ -33,8 +56,20 @@ nav li {
   margin-right: 20px;
 }
 
-main{
+main {
+  overflow: auto;
   padding: 20px;
+}
+
+#content {
+  float: left;
+  width: 75%;
+}
+
+aside {
+  float: right;
+  width: 25%;
+  padding-left: 20px;
 }
 
 .featured-image {
